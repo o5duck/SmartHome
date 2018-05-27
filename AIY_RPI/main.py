@@ -19,7 +19,7 @@ def runSmartHome(recognizer, led):
             sleep(1)
         else:
             print('You said "', text, '"[smart_home]')
-            if 'outing mode' in text:
+            if 'outside mode' in text:
                 led.set_state(aiy.voicehat.LED.BLINK)
                 sleep(1.5)
             elif 'crime mode' in text:
@@ -34,7 +34,7 @@ def runSmartHome(recognizer, led):
             elif 'sleeping mode' in text:
                 led.set_state(aiy.voicehat.LED.BLINK)
                 sleep(1.5)
-            elif 'good bye' in text:
+            elif 'goodbye' in text:
                 led.set_state(aiy.voicehat.LED.OFF)
                 sleep(1)
                 return
@@ -46,13 +46,13 @@ def runSmartHome(recognizer, led):
 def main():
     recognizer = aiy.cloudspeech.get_recognizer()
     #recognizer에 인식할 수 있는 구문 추가
-    recognizer.expect_phrase('smart home')
-    recognizer.expect_phrase('OK, yonam')
+    recognizer.expect_phrase('Smart Home')
+    recognizer.expect_phrase('OK, Yonam')
 
-    recognizer.expect_phrase('outing mode')
+    recognizer.expect_phrase('outside mode')
     recognizer.expect_phrase('crime mode')
     recognizer.expect_phrase('sleeping mode')
-    recognizer.expect_phrase('good bye')
+    recognizer.expect_phrase('goodbye')
     #직접 rpi의 gpio control원할 시, voicehat수정
     #voicehat에 등록되어있는 gpio control불러오기
     button = aiy.voicehat.get_button()
@@ -70,14 +70,14 @@ def main():
             sleep(1)
         else:
             print('You said "', text, '"')
-            if 'smart home' in text:
+            if 'Smart Home' in text:
                 led.set_state(aiy.voicehat.LED.BLINK)
                 sleep(1.5)
                 runSmartHome(recognizer, led)
-            elif 'ok yonam' in text:
+            elif 'OK, Yonam' in text:
                 led.set_state(aiy.voicehat.LED.BLINK)
                 sleep(1.5)
-            elif 'good bye' in text:
+            elif 'goodbye' in text:
                 led.set_state(aiy.voicehat.LED.OFF)
                 sleep(1)
                 break
