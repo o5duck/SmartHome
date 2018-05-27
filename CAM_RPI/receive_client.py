@@ -19,7 +19,7 @@ def rcvMsg(sock):
             pass
 
 def main():
-    HOST, PORT = '192.168.0.78', 7799
+    HOST, PORT = '192.168.0.51', 7799
     motionDetector=MotionDetector(32)
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((HOST, PORT))
