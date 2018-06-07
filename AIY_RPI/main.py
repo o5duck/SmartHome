@@ -9,6 +9,7 @@ import subprocess
 from send_client import SenderClient
 
 def runSmartHome(recognizer, led):
+	subprocess.call(["python3", "main_server.py"])
     while True:
         print("Waiting for your choice...[smart_home]")
         led.set_state(aiy.voicehat.LED.ON)

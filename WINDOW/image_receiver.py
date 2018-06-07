@@ -6,7 +6,9 @@ def receive_image(fileName, address):
         try:
             names = file.readlines()
             for name in names:
-                subprocess.call(["pscp", "-i", "private-key.ppk", "pi@"+address+":/home/pi/"+fileName, "."])
+				dev_name, date, etc = name.split('-')
+				path = "D:\rpi\img_server\" + dev_name + "\" + date
+                subprocess.call(["pscp", "-i", "private-key.ppk", "pi@"+address+":/home/pi/"+fileName, path])
             return True
         except Exception as e:
             print(e)
@@ -15,7 +17,7 @@ def receive_image(fileName, address):
 def send_list(fileName, address):
     try:
         with open(fileName, "w") as file:
-            subprocess.call(["pscp", "-i", "private-key.ppk", fileName, "pi@"+address+":/home/pi"])
+            subprocess.call(["pscp", "-i", "private-key.ppk", fileName, "pi@"+address+":/home/pi/smarthome/SmartHome/CAM_RPI"])
             return True
     except Exception as e:
         print(e)

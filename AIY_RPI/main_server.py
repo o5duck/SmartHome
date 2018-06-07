@@ -68,7 +68,7 @@ class MainServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
 
 def main():
-    HOST, PORT = "192.168.0.78", 7799
+    HOST, PORT = "192.168.0.51", 7799
     try:
         server = MainServer((HOST, PORT), TCPSocketHandler)
         server.serve_forever()
