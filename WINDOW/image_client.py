@@ -7,7 +7,7 @@ from time import sleep
 
 def main():
     HOST, PORT = "192.168.0.30", 7799
-    TEXTFILE = "imageNames.txt"
+    TEXTFILE = 'imageNames.txt'
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((HOST, PORT))
@@ -18,13 +18,12 @@ def main():
                     print(data)
                     file.write(data)
                     data = (sock.recv(1024)).decode('utf-8')
-
-                if image_receiver.receive_image(TEXTFILE, HOST):
-                    print("image received successfully...")
-                    image_receiver.send_list(TEXTFILE, HOST)
                     
             except Exception as e:
                 print(e)
+
+        image_receiver.receive_image(TEXTFILE, HOST)
+        image_receiver.send_list(TEXTFILE, HOST)
 
 if __name__ == '__main__':
     while True:
