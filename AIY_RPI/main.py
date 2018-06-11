@@ -113,7 +113,7 @@ def sendReservedBltMsg(msg):
 
 
 def main():
-    recognizer = aiy.cloudspeech.get_recognizer()
+	recognizer = aiy.cloudspeech.get_recognizer()
     #recognizer에 인식할 수 있는 구문 추가
 	recognizer.expect_phrase('Smart Home')
 	recognizer.expect_phrase('OK, Yonam')
