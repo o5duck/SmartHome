@@ -15,52 +15,52 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from send_client import SenderClient
 
 def runSmartHome(recognizer, led):
-    while True:
-        print("Waiting for your choice...[smart_home]")
-        led.set_state(aiy.voicehat.LED.ON)
-        text = recognizer.recognize()
-        if not text:
-            print('Sorry, I did not hear you.[smart_home]')
-            led.set_state(aiy.voicehat.LED.OFF)
-            sleep(1)
-        else:
-            print('You said "', text, '"[smart_home]')
-            if 'outside mode' in text:
-                led.set_state(aiy.voicehat.LED.BLINK)
+	while True:
+		print("Waiting for your choice...[smart_home]")
+		led.set_state(aiy.voicehat.LED.ON)
+		text = recognizer.recognize()
+		if not text:
+			print('Sorry, I did not hear you.[smart_home]')
+			led.set_state(aiy.voicehat.LED.OFF)
+			sleep(1)
+		else:
+			print('You said "', text, '"[smart_home]')
+			if 'outside mode' in text:
+				led.set_state(aiy.voicehat.LED.BLINK)
 				thread = threading.Thread(target=startOutsideMode, args=())
 				thread.start()
-                sleep(1.5)
-            elif 'crime mode' in text:
-                led.set_state(aiy.voicehat.LED.BLINK)
-                sleep(1.5)
-                client = SenderClient()
-                client.startClient()
-                sleep(1)
-                client.sendMsg('on')
-                sleep(1)
-                client.stopClient()
+				sleep(1.5)
+			elif 'crime mode' in text:
+				led.set_state(aiy.voicehat.LED.BLINK)
+				sleep(1.5)
+				client = SenderClient()
+				client.startClient()
+				sleep(1)
+				client.sendMsg('on')
+				sleep(1)
+				client.stopClient()
 			elif 'exit crime mode' in text:
 				led.set_state(aiy.voicehat.LED.BLINK)
 				sleep(1.5)
 				client = SenderClient()
-                client.startClient()
-                sleep(1)
-                client.sendMsg('off')
-                sleep(1)
-                client.stopClient()
-            elif 'sleeping mode' in text:
-                led.set_state(aiy.voicehat.LED.BLINK)
+				client.startClient()
+				sleep(1)
+				client.sendMsg('off')
+				sleep(1)
+				client.stopClient()
+			elif 'sleeping mode' in text:
+				led.set_state(aiy.voicehat.LED.BLINK)
 				thread = threading.Thread(target=startSleepingMode, args=())
 				thread.start()
-                sleep(1.5)
-            elif 'exit smart home' in text:
-                led.set_state(aiy.voicehat.LED.OFF)
-                sleep(1)
-                return
-            else:
-                print('Sorry, please tell me one more time.[smart_home]')
-                led.set_state(aiy.voicehat.LED.OFF)
-                sleep(1)
+				sleep(1.5)
+			elif 'exit smart home' in text:
+				led.set_state(aiy.voicehat.LED.OFF)
+				sleep(1)
+				return
+			else:
+				print('Sorry, please tell me one more time.[smart_home]')
+				led.set_state(aiy.voicehat.LED.OFF)
+				sleep(1)
 
 def startSleepingMode():
 	api_service = restful_service.ApiService("/sleepingMode/searchInfo")
