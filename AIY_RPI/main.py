@@ -115,13 +115,13 @@ def sendReservedBltMsg(msg):
 def main():
     recognizer = aiy.cloudspeech.get_recognizer()
     #recognizer에 인식할 수 있는 구문 추가
-    recognizer.expect_phrase('Smart Home')
-    recognizer.expect_phrase('OK, Yonam')
+	recognizer.expect_phrase('Smart Home')
+	recognizer.expect_phrase('OK, Yonam')
 
-    recognizer.expect_phrase('outside mode')
-    recognizer.expect_phrase('crime mode')
-    recognizer.expect_phrase('sleeping mode')
-    recognizer.expect_phrase('exit smart home')
+	recognizer.expect_phrase('outside mode')
+	recognizer.expect_phrase('crime mode')
+	recognizer.expect_phrase('sleeping mode')
+	recognizer.expect_phrase('exit smart home')
 	recognizer.expect_phrase('exit crime mode')
     #직접 rpi의 gpio control원할 시, voicehat수정
     #voicehat에 등록되어있는 gpio control불러오기
