@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-from datetime import datetime
+import time
 from time import sleep
 sys.path.append("/home/pi/.virtualenvs/cv/lib/python3.4/site-packages")
 import cv2
@@ -36,8 +36,9 @@ class MotionDetector:
             nz = np.nonzero(thrimg)
             cv2.rectangle(diff, (min(nz[1]), min(nz[0])), (max(nz[1]), max(nz[0])), (255,0,0), 2)
             cv2.rectangle(self.tmp[0], (min(nz[1]), min(nz[0])), (max(nz[1]), max(nz[0])), (0,0,255), 2)
-            now = datetime.now()
-            name = str(now.year)+str(now.month)+str(now.day)+str(now.hour)+str(now.minute)+str(now.second)+".jpg"
+            now = time.localtime()
+            name = '%04d%02d%02d-%02d%02d%02d' % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
+            name = 'device1-'+name+".jpg"
             cv2.imwrite(name, self.tmp[0])
             with open("imageNames.txt", "a") as file:
                 file.write(name+'\n')
