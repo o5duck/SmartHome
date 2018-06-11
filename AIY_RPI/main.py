@@ -125,36 +125,36 @@ def main():
 	recognizer.expect_phrase('exit crime mode')
     #직접 rpi의 gpio control원할 시, voicehat수정
     #voicehat에 등록되어있는 gpio control불러오기
-    button = aiy.voicehat.get_button()
-    led = aiy.voicehat.get_led()
+	button = aiy.voicehat.get_button()
+	led = aiy.voicehat.get_led()
     #recorder시작(녹음 준비)
-    aiy.audio.get_recorder().start()
+	aiy.audio.get_recorder().start()
 
-    while True:
-        print("Waiting for your order...")
-        led.set_state(aiy.voicehat.LED.ON)
-        text = recognizer.recognize()
-        if not text:
-            print('Sorry, I did not hear you.')
-            led.set_state(aiy.voicehat.LED.OFF)
-            sleep(1)
-        else:
-            print('You said "', text, '"')
-            if 'Smart Home' in text:
-                led.set_state(aiy.voicehat.LED.BLINK)
-                sleep(1.5)
-                runSmartHome(recognizer, led)
-            elif 'OK, Yonam' in text:
-                led.set_state(aiy.voicehat.LED.BLINK)
-                sleep(1.5)
-            elif 'goodbye' in text:
-                led.set_state(aiy.voicehat.LED.OFF)
-                sleep(1)
-                break
-            else:
-                print('Sorry, please tell me one more time.')
-                led.set_state(aiy.voicehat.LED.OFF)
-                sleep(1)
+	while True:
+		print("Waiting for your order...")
+		led.set_state(aiy.voicehat.LED.ON)
+		text = recognizer.recognize()
+		if not text:
+			print('Sorry, I did not hear you.')
+			led.set_state(aiy.voicehat.LED.OFF)
+			sleep(1)
+		else:
+			print('You said "', text, '"')
+			if 'Smart Home' in text:
+				led.set_state(aiy.voicehat.LED.BLINK)
+				sleep(1.5)
+				runSmartHome(recognizer, led)
+			elif 'OK, Yonam' in text:
+				led.set_state(aiy.voicehat.LED.BLINK)
+				sleep(1.5)
+			elif 'goodbye' in text:
+				led.set_state(aiy.voicehat.LED.OFF)
+				sleep(1)
+				break
+			else:
+				print('Sorry, please tell me one more time.')
+				led.set_state(aiy.voicehat.LED.OFF)
+				sleep(1)
 
 if __name__ == '__main__':
-    main()
+	main()
