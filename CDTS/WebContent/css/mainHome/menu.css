@@ -1,0 +1,69 @@
+
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Tahoma;
+  font-size: 15px;
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+ul li {
+  font: bold 20px "Tahoma";
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #fff;
+}
+ul li:hover {
+  background: rgb(85, 85, 85, 0.5);
+  color: #f8cf55;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: rgb(85, 85, 85, 0.9);; 
+  display: block; 
+  color: #f4f3f3;
+  border-radius:6px;
+  font: bold 15px/15px "Tahoma";
+}
+ul li ul li:hover { border:2px solid #f8cf55; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none; color:#fff;}
+a:active {text-decoration:none; color: #f8cf55;}

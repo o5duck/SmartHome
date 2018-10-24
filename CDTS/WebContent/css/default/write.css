@@ -1,0 +1,18 @@
+.div-title{
+	margin-top:30px;
+	font-family: "Tahoma";
+	font-size: 35px;
+	font-weight: bold;
+	color:#fff;
+	text-align:center;
+}
+
+.div-user{
+	margin-top:30px;
+	font-family: "Tahoma";
+	font-size: 20px;
+	font-weight: bold;
+	color:rgb(128,100,84);
+	text-align:left;
+	margin-left:50px;
+}

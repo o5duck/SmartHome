@@ -1,0 +1,65 @@
+.waiting-approv{
+	width:490px;
+	hegiht:150px !important;
+	background-color:rgba(7,67,88,0.5);
+	font-size:20pt;
+	font-weight:bold;
+	color: #333333;
+}
+.ing-approv{
+	width:490px;
+	hegiht:157px;
+	background-color:rgba(69,133,137,0.5);
+	font-size:20pt;
+	font-weight:bold;
+	color: #333333;
+}
+.success-approv{
+	width:490px;
+	hegiht:157px;
+	background-color:rgba(219,166,118,0.5);
+	font-size:20pt;
+	font-weight:bold;
+	color: #333333;
+}
+.deny-approv{
+	width:490px;
+	hegiht:157px;
+	background-color:rgba(165,92,85,0.5);
+	font-size:20pt;
+	font-weight:bold;
+	color: #333333;
+}
+
+.waiting-approv:hover{
+	width:490px;
+	hegiht:150px !important;
+	background-color:rgba(7,67,88);
+	font-size:20pt;
+	font-weight:bold;
+	color: #fff;
+}
+.ing-approv:hover{
+	width:490px;
+	hegiht:157px;
+	background-color:rgba(69,133,137);
+	font-size:20pt;
+	font-weight:bold;
+	color: #fff;
+}
+.success-approv:hover{
+	width:490px;
+	hegiht:157px;
+	background-color:rgba(219,166,118);
+	font-size:20pt;
+	font-weight:bold;
+	color: #fff;
+}
+.deny-approv:hover{
+	width:490px;
+	hegiht:157px;
+	background-color:rgba(165,92,85);
+	font-size:20pt;
+	font-weight:bold;
+	color: #fff;
+}

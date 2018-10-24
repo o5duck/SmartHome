@@ -1,0 +1,58 @@
+
+.search-header{
+	width:100%;
+	heigt:100px;
+	float:top;
+}
+
+.list1{
+	width:490px;
+	heigt:630px;
+	float:left;
+	background-color:rgba(132,116,108,0.5);
+	border-radius:20px;
+	margin-right:10px;
+}
+
+.list2{
+	width:490px;
+	heigt:630px;
+	float:left;
+	background-color:rgba(132,116,108,0.5);
+	border-radius:20px;
+	margin-right:10px;
+}
+
+.list3{
+	width:490px;
+	heigt:630px;
+	float:left;
+	background-color:rgba(132,116,108,0.5);
+	border-radius:20px;
+}
+
+.boardList{
+	width:1470px;
+	heigt:730px;
+	float:left;
+	border-radius:20px;
+}
+
+.list-content{
+	width:490px;
+	height:560px;
+}
+
+.list-page{
+	width:490px;
+	height:70px;
+	float: bottom;
+}
+
+.boardList-page{
+	width:1470px;
+	height:30px;
+	float: bottom;
+	background-color:rgba(132,116,108,0.5);
+	margin-top:450px;
+}

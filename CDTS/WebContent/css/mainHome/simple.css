@@ -1,0 +1,64 @@
+@CHARSET "EUC-KR";
+
+body{
+	margin: 0 auto;
+	background-size:1900px 1150px;
+}
+
+.header-main{
+	width:100%;
+	height:250px;
+	background-image:url('../../img/topInfo.jpg');
+	background-repeat:no-repeat;
+	opacity:0.4;
+}
+
+.section-main{
+	width:1500px;
+	height:760px;
+	margin-right:150px;
+	margin-left:150px;
+}
+
+.footer-main{
+	width:1500px;
+	height:140px;
+}
+.info{
+	width:500px;
+	height:50px;
+	text-align:right;
+	font-size:22px;
+	font-family:"Tahoma";
+	color:#acadac;
+	margin-left:50px;
+	font-weight:bold;
+	margin-top:50px;
+	position:relative;
+	top:-50px;
+	z-index:1;
+}
+
+.menu{
+	width:100%;
+	height:100px;
+	position:relative;
+	z-index:3
+}
+
+
+.pageName{
+	width:100%;
+	height:100px;
+	text-align:center;
+	position:relative;
+	color:#000000;
+	font:bold 35pt "cabin";
+	z-index:2;
+}
+
+.txtName{
+	font: bold 20px;
+	color:#fff;
+	margin-bottom: 100px;
+}

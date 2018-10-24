@@ -1,0 +1,174 @@
+
+
+/* select form*/
+
+.select1{
+	width:150px;
+	height:40px;
+	padding-left:10px;
+	border:3px solid #34495e;
+	-webkit-appearance:none;
+	font: bold 15px "Montserrat";
+}
+
+.select2{
+	width:150px;
+	height:40px;
+	padding-left:10px;
+	border:3px solid #ff8080;
+	-webkit-appearance:none;
+	font: bold 15px "Montserrat";
+}
+
+.select3{
+	width:150px;
+	height:40px;
+	padding-left:10px;
+	border:3px solid #8080c0;
+	-webkit-appearance:none;
+	font: bold 15px "Montserrat";
+}
+
+.select4{
+	width:150px;
+	height:34px;
+	padding-left:10px;
+	border:3px solid rgb(128,100,84);
+	-webkit-appearance:none;
+	font: bold 15px "Montserrat";
+}
+
+.select5{
+	width:150px;
+	height:34px;
+	padding-left:10px;
+	border:3px solid rgb(132,116,108);
+	-webkit-appearance:none;
+	font: bold 15px "Montserrat";
+}
+
+input[type="text"]{
+	height:34px;
+	width:250px;
+	font: bold 15px "Montserrat";
+	background-color:#fff;
+	padding-left:10px;
+	border:3px solid #ff8080;
+}
+
+input[type="text"].board{
+	height:34px;
+	width:250px;
+	font: bold 15px "Montserrat";
+	background-color:#fff;
+	padding-left:10px;
+	border:3px solid #8080c0;
+}
+
+input[type="text"].write{
+	height:30px;
+	width:550px;
+	font: bold 15px "Montserrat";
+	background-color:#fff;
+	padding-left:10px;
+	border:3px solid rgb(128,100,84);
+}
+
+input[type="text"].read{
+	height:27px;
+	width:800px;
+	font: bold 15px "Montserrat";
+	background-color:#fff;
+	padding-left:10px;
+	border:3px solid rgb(132,116,108);
+}
+
+input[type="file"]{
+	height:34px;
+	width:800px;
+	font: bold 15px "Montserrat";
+	background-color:#fff;
+	padding-left:10px;
+	border:3px solid rgb(128,100,84);
+}
+
+textarea{
+	height:500px;
+	width:900px;
+	font: bold 15px "Montserrat";
+	background-color:rgba(255,255,255,0.5);
+	padding-left:10px;
+	border:3px solid rgb(128,100,84);
+}
+
+.btn1{
+	width:100px;
+	height:38px;
+	font:bold 15px "Montserrat";
+	padding: 10px 18px;
+	color: #fff;
+	border: none;
+	background-color:#009ED8;
+}
+
+.btn2{
+	width:100px;
+	height:38px;
+	font:bold 15px "Montserrat";
+	padding: 10px 18px;
+	color: #fff;
+	border: none;
+	background-color:#FE5F55;
+}
+
+.btn3{
+	width:100px;
+	height:38px;
+	font:bold 15px "Montserrat";
+	padding: 10px 18px;
+	color: #fff;
+	border: none;
+	background-color:#139675;
+}
+
+.btn4{
+	width:100px;
+	height:38px;
+	font:bold 15px "Montserrat";
+	padding: 10px 18px;
+	color: #fff;
+	border: none;
+	background-color:#C673B3;
+}
+
+.btn5{
+	width:100px;
+	height:38px;
+	font:bold 18px "Montserrat";
+	padding: 5px 15px;
+	color: #fff;
+	border: none;
+	background-color:rgba(128,100,84,0.3);
+}
+
+.btn1:hover {
+  background: #0079a5;
+}
+
+
+.btn2:hover {
+  background: #fe2f22;
+}
+
+
+.btn3:hover {
+  background: #0d6952;
+}
+
+.btn4:hover {
+  background: #b74f9f;
+}
+
+.btn5:hover {
+  background: rgba(128,100,84,0.7);
+}
