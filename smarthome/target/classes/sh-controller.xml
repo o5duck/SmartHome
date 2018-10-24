@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:view-controller path="/main" view-name="main"/>
+	
+	<bean class="controller.RegisterController">
+		<property name="userRegisterService" ref="userRegSvc" />
+	</bean>
+
+	<bean class="controller.LoginController">
+		<property name="userLoginService" ref="userLoginSvc" />
+	</bean>
+	
+	<bean class="controller.DeviceController">
+		<property name="deviceService" ref="deviceSvc" />
+	</bean>
+	
+	<bean class="controller.CrimeModeController">
+		<property name="crimeModeService" ref="crimeModeSvc" />
+	</bean>
+	
+	<bean class="controller.SleepingModeController">
+		<property name="sleepingModeService" ref="sleepingModeSvc" />
+	</bean>
+	
+	<bean class="controller.OutsideModeController">
+		<property name="outsideModeService" ref="outsideModeSvc" />
+	</bean>
+</beans>
