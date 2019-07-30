@@ -15,7 +15,7 @@ class TCPSocketHandler(socketserver.BaseRequestHandler):
                 print(exc)
 
 def main():
-    HOST, PORT = "192.168.0.30", 7799
+    HOST, PORT = "host ip", 7799
     while True:
         server = socketserver.TCPServer((HOST, PORT), TCPSocketHandler)
         server.serve_forever()
