@@ -1,7 +1,7 @@
 #client sending a data about variable mode(crime, outing, sleep) or status(on, off)
 import socket
 
-HOST, PORT = '192.168.0.51', 7799
+HOST, PORT = 'host ip', 7799
 
 class SenderClient:
     def __init__(self):
