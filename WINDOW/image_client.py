@@ -6,7 +6,7 @@ import image_receiver
 from time import sleep
 
 def main():
-    HOST, PORT = "192.168.0.30", 7799
+    HOST, PORT = "host ip", 7799
     TEXTFILE = 'imageNames.txt'
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
